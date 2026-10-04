@@ -507,6 +507,14 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.resume-skills {
+  display: block;
+}
+
+.resume-skills .skills-item:not(:last-child) { margin-bottom: 20px; }
+
+.skills-note { margin-top: 16px; }
+
 
 
 /**
@@ -830,6 +838,10 @@ main {
   line-height: 1.6;
 }
 
+.experience-tech-stack {
+  margin-top: 12px;
+}
+
 .timeline-text-list {
   color: var(--light-gray);
   font-weight: var(--fw-300);
@@ -882,6 +894,28 @@ main {
 \*-----------------------------------*/
 
 .filter-list { display: none; }
+
+.repository-filters {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 0 4px 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.repository-filters .filter-item { flex: 0 0 auto; }
+
+.repository-filters button {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  transition: var(--transition-1);
+}
+
+.repository-filters button:hover { color: var(--light-gray-70); }
+
+.repository-filters button.active { color: var(--orange-yellow-crayola); }
 
 .filter-select-box {
   position: relative;
@@ -1031,6 +1065,58 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+
+.repo-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, hsl(208, 100%, 45%), hsl(188, 95%, 18%) 75%, hsl(154, 100%, 8%));
+}
+
+.project-item:nth-child(3n + 2) .repo-preview {
+  background: linear-gradient(135deg, hsl(300, 100%, 26%), hsl(280, 90%, 17%) 70%, hsl(145, 100%, 7%));
+}
+
+.project-item:nth-child(3n) .repo-preview {
+  background: linear-gradient(135deg, hsl(173, 100%, 31%), hsl(166, 95%, 18%) 70%, hsl(145, 100%, 7%));
+}
+
+.repo-main-icon {
+  color: var(--white-2);
+  font-size: 72px;
+}
+
+.repo-title {
+  overflow-wrap: anywhere;
+  text-transform: none;
+}
+
+.project-category {
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.github-status {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+}
+
+.github-status { margin-bottom: 16px; }
+
+.github-status[data-state="error"] { color: var(--orange-yellow-crayola); }
+
+.github-profile-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--orange-yellow-crayola);
+}
+
+.github-profile-link:hover { text-decoration: underline; }
 
 
 
